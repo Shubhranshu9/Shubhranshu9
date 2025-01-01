@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/contact.css">
+ <!-- <link rel="stylesheet" href="css/style.css">-->
+</head>
+<body>
+  <!-- Navbar -->
+ 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-white" href="#">
+        <img src="/images/logo/TAXISM.jpg" alt="Logo" width="40" height="40" class="me-2"> TAXISM
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link fw-bold text-white" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold text-white" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold text-white" href="#solutions">Solutions</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold text-white" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold text-white" href="#industries">Industries</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold text-white" href="#team">Our Team</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold text-white" href="career.html">Career</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold text-white" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Contact Section -->
+  <div class="contact-container">
+    <div class="background"></div>
+    <div class="content">
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you! Reach out to us for any queries or assistance.</p>
+
+      
+
+      <!-- Contact Form -->
+      <div class="contact-section">
+        <div class="contact-image">
+          <img src="images/banner - Copy.jpeg" alt="Contact Form">
+        </div>
+        <div class="contact-text">
+          <h2>Send Us a Message</h2>
+          <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <div>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required >
+            </div>
+            <div>
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+          </form>
+        
+          <script>
+            document.getElementById('contactForm').addEventListener('submit', async function (e) {
+              e.preventDefault();
+        
+              const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+              };
+        
+              try {
+                const response = await fetch('http://localhost:3000/contact', {
+                  mode: 'cors',
+                  credentials: 'include',
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify(formData)
+                });
+        
+                if (response.ok) {
+                  alert('Message sent successfully!');
+                } else {
+                  const errorData = await response.json();
+                  alert('Failed to send message: ' + (errorData.error || 'Unknown error'));
+                }
+              } catch (error) {
+                console.error('Error:', error);
+                alert('There was an error sending your message.');
+              }
+            });
+          </script>
+        
+
+          
+          
+    </section>
+
+
+    <!-- Contact Details -->
+    <div class="contact-section">
+        <div class="contact-image">
+          <img src="images/banner2.jpeg" alt="Contact">
+        </div>
+        <div class="contact-text">
+          <h2>Contact Details</h2>
+          <p><strong>Email:</strong> support@taxism.in</p>
+          <p><strong>Phone:</strong> +1-800-123-4567</p>
+          <p><strong>Address:</strong> 123 Taxism St., Finance City, USA</p>
+        </div>
+      </div>
+
+      <!-- Map Section -->
+      <div class="contact-section reverse">
+        <div class="contact-image">
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019674275319!2d-122.4201!3d37.7789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c0d0aefd5%3A0x6e2f394edaf5f35!2sSan%20Francisco!5e0!3m2!1sen!2sus!4v1620451234567!5m2!1sen!2sus"
+            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="contact-text">
+          <h2>Our Location</h2>
+          <p>Find us on the map to visit our office or for in-person assistance.</p>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>

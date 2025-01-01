@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Opportunities</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/career.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+          <a class="navbar-brand fw-bold text-white" href="#">
+            <img src="/images/logo/TAXISM.jpg" alt="Logo" width="40" height="40" class="me-2"> TAXISM
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link fw-bold text-white" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link fw-bold text-white" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link fw-bold text-white" href="#solutions">Solutions</a></li>
+              <li class="nav-item"><a class="nav-link fw-bold text-white" href="#services">Services</a></li>
+              <li class="nav-item"><a class="nav-link fw-bold text-white" href="#industries">Industries</a></li>
+              <li class="nav-item"><a class="nav-link fw-bold text-white" href="#team">Our Team</a></li>
+              <li class="nav-item"><a class="nav-link fw-bold text-white" href="career.html">Career</a></li>
+              <li class="nav-item"><a class="nav-link fw-bold text-white" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+
+    <!-- Career Section -->
+    <!-- Hero Section -->
+   
+    <div class="career-container">
+        <div class="background"></div>
+        <div class="content">
+            <h1>Join Our Team</h1>
+            <p>Explore exciting career opportunities with us and be a part of our journey.</p>
+
+            <!-- Job Openings Section -->
+            <div class="career-section">
+                <div class="career-image">
+                    <img src="images/taxc.png" alt="Job Opening 1">
+                </div>
+                <div class="career-text">
+                    <h2>Tax Consultant</h2>
+                    <p><strong>Location:</strong> Finance City, USA</p>
+                    <p><strong>Experience:</strong> 2+ Years</p>
+                    <p><strong>Description:</strong> Provide expert advice on tax planning, compliance, and strategies
+                        to optimize client benefits.</p>
+                </div>
+            </div>
+
+            <div class="career-section reverse">
+                <div class="career-image">
+                    <img src="images/auditmanager.png" alt="Job Opening 2">
+                </div>
+                <div class="career-text">
+                    <h2>Audit Manager</h2>
+                    <p><strong>Location:</strong> Audit City, USA</p>
+                    <p><strong>Experience:</strong> 3+ Years</p>
+                    <p><strong>Description:</strong> Manage financial audits, ensure compliance, and provide
+                        recommendations for improvements.</p>
+                </div>
+            </div>
+
+            <div class="career-section">
+                <div class="career-image">
+                    <img src="images/finnance.png" alt="Job Opening 3">
+                </div>
+                <div class="career-text">
+                    <h2>Financial Analyst</h2>
+                    <p><strong>Location:</strong> Finance Hub, USA</p>
+                    <p><strong>Experience:</strong> 1+ Years</p>
+                    <p><strong>Description:</strong> Analyze financial data, prepare reports, and provide insights to
+                        support business decisions.</p>
+                </div>
+            </div>
+            <!-- Career Form Section -->
+            <div class="hero">
+                <h2>Find Your Career Path</h2>
+                <p>Join a team that values innovation, passion, and excellence.</p>
+            </div>
+            <!-- Career Form Section -->
+            <div class="career-form-section">
+                <h2>Apply for Your Dream Job</h2>
+                <form id="careerForm" enctype="multipart/form-data">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="position">Select Position:</label>
+                    <select id="position" name="position" required>
+                        <option value="Software Developer">Software Developer</option>
+                        <option value="UI/UX Designer">UI/UX Designer</option>
+                        <option value="Digital Marketer">Digital Marketer</option>
+                    </select>
+
+                    <label for="message">Why do you want to join us?</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <label for="resume">Upload Resume/CV:</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+
+                    <button type="submit">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/career.js"></script>
+</body>
+
+</html>

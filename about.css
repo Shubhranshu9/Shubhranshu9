@@ -1,0 +1,209 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color: #003366; /* Dark blue */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  
+  .navbar-heading {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+  
+  /* About Section */
+  .about-container {
+    position: relative;
+    height: 100vh;
+    overflow: auto;
+    padding-top: 80px; /* To offset the navbar */
+  }
+  
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/banner3.jpeg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Push it behind the content */
+  }
+  
+  .content {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .front-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 20px auto;
+  }
+  
+  .about-text {
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .about-text h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    position:relative;
+  }
+  
+  .about-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .front-image {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .about-text h1 {
+      font-size: 1.5em;
+    }
+  
+    .about-text p {
+      font-size: 1em;
+    }
+  
+    .logo {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .navbar-heading {
+      font-size: 1.2em;
+    }
+  }
+  
+
+  /* About Sections */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+    padding: 20px;
+    background: rgba(30, 5, 143, 0.6);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .about-section:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  .about-section.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .about-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .about-image img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  .about-text {
+    flex: 1;
+    margin-left: 20px;
+    color: white;
+    text-align: left;
+  }
+  
+  .about-text h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .about-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-section {
+      flex-direction: column;
+    }
+  
+    .about-section.reverse {
+      flex-direction: column;
+    }
+  
+    .about-image img {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+    }
+  
+    .about-text {
+      margin: 0;
+      text-align: center;
+    }
+  }
+ 
+  
